@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_192650) do
+ActiveRecord::Schema.define(version: 2020_06_12_201925) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_06_12_192650) do
     t.boolean "complete"
     t.datetime "due_date"
     t.integer "user_id"
+    t.integer "creator_id"
     t.index ["category_id"], name: "index_tasks_on_category_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
